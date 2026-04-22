@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:apidocs.ebis5.com)",
+      "WebFetch(domain:ia.ebis5.com)",
+      "Bash(.venv/Scripts/python.exe -c \"import httpx, mcp\")"
+    ]
+  }
+}

@@ -2,10 +2,9 @@ import requests
 from base64 import b64encode
 
 
-BASE_URL = "https://ia.ebis5.com/api/integration/external"
+BASE_URL = "https://ia.ebis5.com/api/integration/external#"
 USERNAME = "IslanderAvApiAccess"
 PASSWORD = "A0606045-CB8F-46F6-A6BE-355A73455541"
-
 
 def get_auth_header() -> dict:
     token = b64encode(f"{USERNAME}:{PASSWORD}".encode()).decode()

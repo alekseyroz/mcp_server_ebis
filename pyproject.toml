@@ -17,5 +17,3 @@ mcp-server-ebis = "server:mcp.run"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.hatch.build.targets.wheel]
-packages = ["ebis_cloud"]

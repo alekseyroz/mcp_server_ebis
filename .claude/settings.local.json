@@ -6,8 +6,8 @@
       "Bash(.venv/Scripts/python.exe -c \"import httpx, mcp\")"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "ebis-cloud"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }

@@ -299,3 +299,11 @@ def vendors(action: str, params: dict | None = None) -> dict:
     Pass action-specific keyword arguments via `params`.
     """
     return _dispatch("vendors", action, _VENDOR_ACTIONS, params)
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+if __name__ == "__main__":
+    mcp.run()

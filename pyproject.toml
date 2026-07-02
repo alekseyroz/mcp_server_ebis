@@ -5,6 +5,7 @@ description = "MCP server for eBis Cloud REST API"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "ebis-cloud",
     "httpx>=0.28.1",
     "mcp[cli]>=1.27.0",
     "requests>=2.33.1",
@@ -16,4 +17,7 @@ mcp-server-ebis = "server:mcp.run"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+ebis-cloud = { path = "../ebis_cloud" }
 

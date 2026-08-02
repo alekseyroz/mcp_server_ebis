@@ -1,4 +1,4 @@
-"""HTTP client for eBis Cloud API."""
+"""HTTP client for Veryon Workcenter (WC) API."""
 
 from base64 import b64encode
 from typing import Any
@@ -15,7 +15,7 @@ def get_auth_headers() -> dict[str, str]:
 
 
 def get(endpoint: str, params: dict | None = None) -> Any:
-    """Make GET request to eBis API."""
+    """Make GET request to WC API."""
     with httpx.Client(timeout=30) as client:
         resp = client.get(
             f"{BASE_URL}/{endpoint}",
@@ -27,7 +27,7 @@ def get(endpoint: str, params: dict | None = None) -> Any:
 
 
 def post(endpoint: str, body: dict) -> Any:
-    """Make POST request to eBis API."""
+    """Make POST request to WC API."""
     with httpx.Client(timeout=30) as client:
         resp = client.post(
             f"{BASE_URL}/{endpoint}",

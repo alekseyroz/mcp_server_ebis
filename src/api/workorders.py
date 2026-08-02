@@ -41,7 +41,7 @@ def export_workorders(
     id_accessible: bool = False,
 ) -> dict:
     """
-    Export detailed work order information from eBis Cloud.
+    Export detailed work order information from Veryon Workcenter (WC).
 
     Includes optional sections: Outside Repair, Signoffs, Service, Media, Parts, Invoices.
 
@@ -156,7 +156,7 @@ def create_update_workorder(
     priority_id: int | None = None,
 ) -> dict:
     """
-    Create or update a work order in eBis Cloud.
+    Create or update a work order in Veryon Workcenter (WC).
 
     eBis resolves city, customer, billing profile, and aircraft in order before
     creating the work order. Use get_workorder_addupdate_lists() to find valid IDs.

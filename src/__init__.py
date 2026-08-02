@@ -1,1 +1,1 @@
-"""eBis Cloud MCP Server."""
+"""Veryon Workcenter (WC) MCP Server."""

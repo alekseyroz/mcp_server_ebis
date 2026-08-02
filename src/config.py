@@ -1,4 +1,4 @@
-"""Configuration management for eBis Cloud API."""
+"""Configuration management for Veryon Workcenter (WC) API."""
 
 import os
 from pathlib import Path
@@ -18,11 +18,11 @@ def _load_dotenv(path: Path) -> None:
 
 _load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
-BASE_URL = os.environ.get("EBIS_BASE_URL", "https://ia.ebis5.com/api/integration/external")
-USERNAME = os.environ.get("EBIS_USERNAME")
-PASSWORD = os.environ.get("EBIS_PASSWORD")
+BASE_URL = os.environ.get("WC_BASE_URL", "https://ia.ebis5.com/api/integration/external")
+USERNAME = os.environ.get("WC_USERNAME")
+PASSWORD = os.environ.get("WC_PASSWORD")
 
 if not USERNAME or not PASSWORD:
     raise RuntimeError(
-        "EBIS_USERNAME and EBIS_PASSWORD must be set — copy .env.example to .env and fill them in."
+        "WC_USERNAME and WC_PASSWORD must be set — copy .env.example to .env and fill them in."
     )

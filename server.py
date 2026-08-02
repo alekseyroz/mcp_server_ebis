@@ -1,19 +1,19 @@
-"""MCP Server for eBis Cloud REST API.
+"""MCP Server for Veryon Workcenter (WC) REST API.
 
 Exposes 10 broad domain tools (rather than one tool per REST operation) to keep the
 tool-selection surface small for LLM callers. Each domain tool takes an `action`
-parameter naming the underlying `EbisClient` method to invoke, plus a `params` dict
+parameter naming the underlying `WcClient` method to invoke, plus a `params` dict
 of keyword arguments for that method.
 """
 
-from ebis_cloud import EbisClient
+from veryon_wc import WcClient
 from mcp.server.fastmcp import FastMCP
 
 from src.config import BASE_URL, PASSWORD, USERNAME
 
-mcp = FastMCP("eBis Cloud")
+mcp = FastMCP("Veryon Workcenter (WC)")
 
-_client = EbisClient(base_url=BASE_URL, username=USERNAME, password=PASSWORD)
+_client = WcClient(base_url=BASE_URL, username=USERNAME, password=PASSWORD)
 
 
 def _dispatch(domain: str, action: str, allowed: frozenset[str], params: dict | None = None):

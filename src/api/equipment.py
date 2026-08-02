@@ -725,7 +725,7 @@ def add_update_equipment(
     user_validate_temp_token: str | None = None,
 ) -> dict:
     """
-    Add or update one or more pieces of equipment in eBis Cloud.
+    Add or update one or more pieces of equipment in Veryon Workcenter (WC).
 
     Supports two calling modes:
     - **Batch mode**: Pass a list of equipment dicts via `equipment_batch`. Each dict

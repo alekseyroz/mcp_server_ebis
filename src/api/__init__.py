@@ -1,1 +1,1 @@
-"""eBis Cloud API resource modules."""
+"""Veryon Workcenter (WC) API resource modules."""

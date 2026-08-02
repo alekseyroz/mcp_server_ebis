@@ -268,7 +268,7 @@ def add_update_users(
     subscription_last_alert: str | None = None,
 ) -> dict:
     """
-    Add or update one or more users in eBis Cloud.
+    Add or update one or more users in Veryon Workcenter (WC).
 
     Supports two calling modes:
     - **Batch mode**: Pass a list of user dicts via `user_batch`. Each dict must include
